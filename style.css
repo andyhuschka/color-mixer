@@ -1,0 +1,160 @@
+/* Globale Einstellungen */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif; /* Moderne Schriftart */
+  background-color: dodgerblue; /* Standard-Hintergrundfarbe */
+  transition: background-color 0.3s ease;
+}
+
+/* Zentriere den Inhalt im Body */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Styling des Headers */
+header {
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Hex-Wert Anzeige */
+#colorValue {
+  font-size: 2rem; /* Größerer Hexcode */
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Container für die Slider */
+.slider-container {
+  display: flex;
+  justify-content: space-between; /* Gleicher Abstand zwischen den Slidern */
+  width: 80%; /* Breite des Containers */
+  max-width: 600px; /* Maximale Breite */
+  padding: 20px; /* Innenabstand */
+  background: rgba(255, 255, 255, 0.1); /* Leicht durchsichtiger Hintergrund */
+  border-radius: 10px; /* Abgerundete Ecken */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Schatten für Tiefe */
+}
+
+/* Styling für die Slider */
+input[type="range"] {
+  -webkit-appearance: none; /* Entfernt Standard-Styling */
+  width: 100%; /* Breite des Sliders */
+  height: 12px; /* Höhe des Sliders */
+  border-radius: 5px;
+  outline: none;
+  opacity: 0.8;
+  transition: opacity 0.15s ease-in-out;
+}
+
+/* Styling für den roten Slider */
+#red {
+  background: linear-gradient(
+    to right,
+    #000000,
+    #ff0000
+  ); /* Von Schwarz zu Rot */
+}
+
+#red::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px; /* Größe des Schiebers */
+  height: 20px;
+  border-radius: 50%;
+  background-color: white; /* Schieberegler bleibt weiß */
+  cursor: pointer;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+#red::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling für den grünen Slider */
+#green {
+  background: linear-gradient(
+    to right,
+    #000000,
+    #00ff00
+  ); /* Von Schwarz zu Grün */
+}
+
+#green::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+#green::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling für den blauen Slider */
+#blue {
+  background: linear-gradient(
+    to right,
+    #000000,
+    #0000ff
+  ); /* Von Schwarz zu Blau */
+}
+
+#blue::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+#blue::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 600px) {
+  .slider-container {
+    flex-direction: column;
+    width: 90%;
+  }
+  #colorValue {
+    font-size: 1.5rem;
+  }
+}
